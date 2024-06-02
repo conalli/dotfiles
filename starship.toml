@@ -1,0 +1,88 @@
+command_timeout = 1000
+format = "$all$directory$character"
+
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+symbol = "  "
+
+[character]
+error_symbol = "[✗](bold red) "
+success_symbol = "[➜](bold green) "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " "
+
+[docker_context]
+format = "via [$symbol($context)](blue bold) "
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+detect_files = ["package.json"]
+detect_folders = ["node_modules"]
+
+[package]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+format = "via [ $version](red bold)"
+symbol = " "
+
+[scala]
+symbol = " "
+
+[shlvl]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "
+
+[username]
+# show_always = true
