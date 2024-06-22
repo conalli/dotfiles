@@ -69,6 +69,9 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ls='ls --color'
+alias la='tree -a -C -I .git'
+alias l="eza -l --icons --git -a"
+alias lt="eza --tree --level=2 --long --icons --git"
 
 # Shell integrations
 source "$HOME/.docker/init-zsh.sh" || true # Added by Docker Desktop
