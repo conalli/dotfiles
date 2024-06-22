@@ -19,6 +19,15 @@ cd dotfiles
 then use GNU stow to create symlinks
 
 ```sh
-stow .
+stow . 
 ```
 
+### Installing packages with Homebrew
+
+```bash
+# Leaving a machine
+brew leaves > leaves.txt
+
+# Fresh installation
+xargs brew install < leaves.txt
+```
