@@ -67,6 +67,29 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  --info=inline-right \
+  --ansi \
+  --layout=reverse \
+  --border=none
+  --color=bg+:#283457 \
+  --color=bg:#16161e \
+  --color=border:#27a1b9 \
+  --color=fg:#c0caf5 \
+  --color=gutter:#16161e \
+  --color=header:#ff9e64 \
+  --color=hl+:#2ac3de \
+  --color=hl:#2ac3de \
+  --color=info:#545c7e \
+  --color=marker:#ff007c \
+  --color=pointer:#ff007c \
+  --color=prompt:#2ac3de \
+  --color=query:#c0caf5:regular \
+  --color=scrollbar:#27a1b9 \
+  --color=separator:#ff9e64 \
+  --color=spinner:#ff007c \
+"
+
 # Aliases
 alias ls='ls --color'
 alias la='tree -a -C -I .git'
@@ -74,8 +97,10 @@ alias l="eza -l --icons --git -a"
 alias lt="eza --tree --level=2 --long --icons --git"
 
 # Shell integrations
-source "$HOME/.docker/init-zsh.sh" || true # Added by Docker Desktop
+source <(docker completion zsh)
 
-eval "$(fzf --zsh)"
+source <(fzf --zsh)
 
-eval "$(/usr/local/bin/mise activate zsh)"
+eval "$(zoxide init zsh)"
+
+eval "$($(brew --prefix)/bin/mise activate zsh)"
