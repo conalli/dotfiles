@@ -1,9 +1,18 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 command_timeout = 1000
+
 format = "$all$directory$character"
 
 [aws]
 format = 'on [$symbol($profile )(\($region\) )]($style)'
 symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
 
 [character]
 error_symbol = "[✗](bold red) "
@@ -27,6 +36,9 @@ symbol = " "
 
 [elm]
 symbol = " "
+
+[fossil_branch]
+symbol = " "
 
 [git_branch]
 symbol = " "
@@ -55,6 +67,48 @@ symbol = " "
 [nodejs]
 detect_files = ["package.json"]
 detect_folders = ["node_modules"]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+RedHatEnterprise = " "
+Redhat = " "
+Redox = "󰀘 "
+SUSE = " "
+Solus = "󰠳 "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+openSUSE = " "
 
 [package]
 symbol = " "
@@ -69,7 +123,7 @@ symbol = " "
 symbol = " "
 
 [ruby]
-symbol = " "
+symbol = " "
 
 [rust]
 format = "via [ $version](red bold)"
