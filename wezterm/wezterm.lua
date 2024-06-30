@@ -1,18 +1,32 @@
---local wezterm = require("wezterm")
+local wezterm = require 'wezterm'
 
 return {
-	color_scheme = "Tokyo Night",
+	color_scheme = 'catppuccin-mocha',
+	enable_tab_bar = false,
 	font_size = 14.0,
 	window_background_opacity = 0.8,
-	hide_tab_bar_if_only_one_tab = true,
 	window_padding = {
-		top = 0,
-		bottom = 0,
-		right = 0,
-		left = 0,
+		top = '0.5cell',
+		bottom = '0.5cell',
+		right = '1cell',
+		left = '1cell',
 	},
 	inactive_pane_hsb = {
 		saturation = 0.8,
 		brightness = 0.7,
 	},
+	keys = {
+		{
+			key = 'f',
+			mods = 'CTRL',
+			action = wezterm.action.ToggleFullScreen,
+		},
+	},
+	mouse_bindings = {
+		{
+		  event = { Up = { streak = 1, button = 'Left' } },
+		  mods = 'CTRL',
+		  action = wezterm.action.OpenLinkAtMouseCursor,
+		},
+	  },
 }

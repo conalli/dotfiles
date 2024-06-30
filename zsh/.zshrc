@@ -67,6 +67,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
+# FZF Tokyo Night
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --info=inline-right \
   --ansi \
@@ -89,6 +90,11 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=separator:#ff9e64 \
   --color=spinner:#ff007c \
 "
+# FZF Catppuccin Mocha
+# export FZF_DEFAULT_OPTS=" \
+# --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+# --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+# --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
 # Aliases
 alias ls='ls --color'
