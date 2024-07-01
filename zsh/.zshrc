@@ -18,7 +18,7 @@ zinit ice as"command" from"gh-r" \
           atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
           atpull"%atclone" src"init.zsh"
 zinit light starship/starship
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
+STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 # Path config
 
@@ -68,7 +68,7 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # FZF Tokyo Night
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --info=inline-right \
   --ansi \
   --layout=reverse \
